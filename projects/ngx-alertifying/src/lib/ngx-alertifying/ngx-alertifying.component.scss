@@ -1,0 +1,14 @@
+.ngx-alert-ext {
+    width: 100%;
+    .ngx-alert {
+        padding: 1.5rem 2rem 1.5rem 2rem;
+        display: flex;
+        align-items: center;
+        border-radius: .8rem;
+        justify-content: space-between;
+        border: 1px solid #f0f0f0;
+        border-left: .8rem solid;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: .5rem;
+    }
+}
