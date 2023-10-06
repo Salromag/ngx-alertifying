@@ -10,3 +10,4 @@ export * from './lib/ngx-alertifying.module';
 export * from './lib/shared/enums/alert-styles.enum';
 export * from './lib/shared/enums/alert-type.enum';
 export * from './lib/shared/interfaces/ngx-alertifying-config.interface';
+export * from './lib/shared/injection-token/config-token';
