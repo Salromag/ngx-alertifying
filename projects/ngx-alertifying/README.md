@@ -1,24 +1,65 @@
-# NgxAlertifying
+# ngx-alertifying
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
+---
 
-## Code scaffolding
+## Description
 
-Run `ng generate component component-name --project ngx-alertifying` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-alertifying`.
-> Note: Don't forget to add `--project ngx-alertifying` or else it will be added to the default project in your `angular.json` file. 
+ngx-alertifying library is a valuable tool for developers seeking a straightforward and stylish method to display important messages within their Angular applications. Our alert message component provides instant feedback on actions, errors, or confirmations, enhancing user experience significantly.
 
-## Build
+## Key Features
 
-Run `ng build ngx-alertifying` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Complete Customization:** Tailor alert messages to match your application perfectly by choosing colors, icons, and animations.
+  
+- **Versatile Alert Types:** Choose from various alert types, including information, warning, success, and danger, to suit different usage contexts.
 
-## Publishing
+- **Easy Integration:** Seamless integration into your Angular application. Start displaying alert messages in just a few minutes.
 
-After building your library with `ng build ngx-alertifying`, go to the dist folder `cd dist/ngx-alertifying` and run `npm publish`.
+- **Responsive and Appealing:** Designed for seamless functionality across devices of all sizes, ensuring a consistent user experience on any screen.
 
-## Running unit tests
+- **Enhanced Accessibility:** Our alert messages are designed for easy readability and usability, catering to all users, including those with disabilities.
 
-Run `ng test ngx-alertifying` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Installation
 
-## Further help
+```
+npm install ngx-alertifying
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Basic usage
+```typescript
+import { AlertModule } from 'angular-alert-messages-library';
+
+@NgModule({
+imports: [AlertModule],
+// ...
+})
+export class YourModule { }
+```
+
+## Configuration
+Module accepts also configuration for the colors and the style of the alert
+```typescript
+import { AlertModule } from 'angular-alert-messages-library';
+// Color: use html colors like #fcfcfc
+// style: ALERT_STYLE.MATERIAL - ALERT_STYLE.BOOTSTRAP
+
+@NgModule({
+imports: [AlertModule.forRoot({
+    infoColor: '',  
+    warningColor: '',
+    dangerColor: '',
+    successColor: '',
+    style: ALERT_sTYLE.MATERIAL 
+})],
+//
+})
+export class YourModule { }
+```
+
+## Component usage example
+
+```html
+<ngx-alertifying [message]="'This is a info alert—check it out!'" [type]="typeSuccess"></ngx-alertifying>
+
+<ngx-alertifying [message]="'This is a info alert—check it out!'" [type]="typeSuccess" [showBackground]="true"></ngx-alertifying>
+
+```
