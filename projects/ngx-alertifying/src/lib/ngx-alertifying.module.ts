@@ -3,6 +3,7 @@ import { NgxAlertifyingComponent } from './ngx-alertifying/ngx-alertifying.compo
 import { NgxAlertifyingService } from './ngx-alertifying.service';
 import { NgxAlertifyingConfig } from './shared/interfaces/ngx-alertifying-config.interface';
 import { CONFIG } from './shared/injection-token/config-token';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -10,6 +11,7 @@ import { CONFIG } from './shared/injection-token/config-token';
     NgxAlertifyingComponent
   ],
   imports: [
+    CommonModule
   ],
   exports: [
     NgxAlertifyingComponent
