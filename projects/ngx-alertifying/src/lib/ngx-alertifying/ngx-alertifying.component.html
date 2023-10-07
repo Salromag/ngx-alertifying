@@ -3,7 +3,8 @@
     [style.border-left-color]="alertColor"
     [style.background-color]="alertBackground">
         <div class="message">
-            <span id="ngx-alert-message-{{type}}">{{message}}</span>
+            <span class="title" id="ngx-alertifying-message-{{type}}-title" *ngIf="title">{{ title }}</span>
+            <span id="ngx-alertifying-message-{{type}}">{{ message }}</span>
         </div>
     </div>
 </div>

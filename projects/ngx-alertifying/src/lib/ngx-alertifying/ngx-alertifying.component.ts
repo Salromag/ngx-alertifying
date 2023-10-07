@@ -10,6 +10,7 @@ import { NgxAlertifyingConfig } from '../shared/interfaces/ngx-alertifying-confi
 })
 export class NgxAlertifyingComponent implements OnInit {
   @Input() message: string;
+  @Input() title: string;
   @Input() type: ALERT_TYPE;
   @Input() showBackground: boolean = false;
 
