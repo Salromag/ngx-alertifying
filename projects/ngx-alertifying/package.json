@@ -1,6 +1,6 @@
 {
   "name": "ngx-alertifying",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "repository": {
     "url": "https://github.com/Salromag/ngx-alertifying"
   },
@@ -13,8 +13,8 @@
   "license": "ISC",
   "keywords": ["material", "alerts", "bootstrap", "design", "angular", "library", "free", "component", "ngx-alertifying"],
   "peerDependencies": {
-    "@angular/common": "^14.0.0",
-    "@angular/core": "^14.0.0"
+    "@angular/common": "^15.2.0",
+    "@angular/core": "^15.2.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
