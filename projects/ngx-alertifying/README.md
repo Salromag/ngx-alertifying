@@ -26,10 +26,10 @@ npm install ngx-alertifying
 
 ## Basic usage
 ```typescript
-import { AlertModule } from 'angular-alert-messages-library';
+import { NgxAlertifyingModule } from 'ngx-alertifying';
 
 @NgModule({
-imports: [AlertModule],
+imports: [NgxAlertifyingModule],
 // ...
 })
 export class YourModule { }
@@ -38,12 +38,12 @@ export class YourModule { }
 ## Configuration
 Module accepts also configuration for the colors and the style of the alert
 ```typescript
-import { AlertModule } from 'angular-alert-messages-library';
+import { NgxAlertifyingModule } from 'ngx-alertifying';
 // Color: use html colors like #fcfcfc
 // style: ALERT_STYLE.MATERIAL - ALERT_STYLE.BOOTSTRAP
 
 @NgModule({
-imports: [AlertModule.forRoot({
+imports: [NgxAlertifyingModule.forRoot({
     infoColor: '',  
     warningColor: '',
     dangerColor: '',
