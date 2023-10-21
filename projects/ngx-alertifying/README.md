@@ -67,3 +67,11 @@ export class YourModule { }
 <ngx-alertifying [title]="'Hey, this is an alert title'" [message]="'This is a info alert—check it out!'" [type]="typeInfo" [showBackground]="true"></ngx-alertifying>
 
 ```
+
+## Component visual look
+
+### Example with no Background
+![no_bg](https://github.com/Salromag/ngx-alertifying/assets/128465637/4d8a0ed1-3f1f-4efe-9a5e-32bd039191d1)
+
+### Example with Background
+![bg](https://github.com/Salromag/ngx-alertifying/assets/128465637/81505d6b-9c14-4f86-b70a-e60b0d7a6559)
