@@ -4,7 +4,7 @@ import { NgxAlertifyingService } from '../ngx-alertifying.service';
 import { NgxAlertifyingConfig } from '../shared/interfaces/ngx-alertifying-config.interface';
 
 @Component({
-  selector: 'ngx-alertifying',
+  selector: 'ngx-alert',
   templateUrl: './ngx-alertifying.component.html',
   styleUrls: ['./ngx-alertifying.component.scss']
 })
@@ -38,11 +38,11 @@ export class NgxAlertifyingComponent implements OnInit {
   }
 
   getColorHexARgba(colorHex: string): void {
-    const opacidad: number = 0.1;
+    const opacity: number = 0.1;
     const r: number = parseInt(colorHex.slice(1, 3), 16);
     const g: number = parseInt(colorHex.slice(3, 5), 16);
     const b: number = parseInt(colorHex.slice(5, 7), 16);
 
-    this.alertBackground = `rgba(${r}, ${g}, ${b}, ${opacidad.toFixed(2)})`;
+    this.alertBackground = `rgba(${r}, ${g}, ${b}, ${opacity.toFixed(2)})`;
   }
 }
