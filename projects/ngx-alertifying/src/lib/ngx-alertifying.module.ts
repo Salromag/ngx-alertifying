@@ -19,7 +19,7 @@ import { CommonModule } from '@angular/common';
   providers: []
 })
 export class NgxAlertifyingModule { 
-  static forRoot(config?: NgxAlertifyingConfig): ModuleWithProviders<NgxAlertifyingModule>  {
+  static forRoot(config: NgxAlertifyingConfig = new NgxAlertifyingConfig()): ModuleWithProviders<NgxAlertifyingModule>  {
     return {
       ngModule: NgxAlertifyingModule,
       providers: [ NgxAlertifyingService, { provide: CONFIG, useValue: config } ]
