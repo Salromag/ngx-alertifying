@@ -24,7 +24,7 @@ ngx-alertifying library is a valuable tool for developers seeking a straightforw
 npm install ngx-alertifying
 ```
 
-## Basic usage
+## Alert Basic usage
 ```typescript
 import { NgxAlertifyingModule } from 'ngx-alertifying';
 
@@ -48,7 +48,7 @@ imports: [NgxAlertifyingModule.forRoot({
     warningColor: '',
     dangerColor: '',
     successColor: '',
-    style: ALERT_sTYLE.MATERIAL 
+    style: ALERT_STYLE.MATERIAL
 })],
 //
 })
@@ -75,3 +75,43 @@ export class YourModule { }
 
 ### Example with Background
 ![bg](https://github.com/Salromag/ngx-alertifying/assets/128465637/81505d6b-9c14-4f86-b70a-e60b0d7a6559)
+
+
+## Toast Basic usage
+
+## Configuration
+Module accepts also configuration for the colors and the style of the alert
+```typescript
+import { NgxAlertifyingModule } from 'ngx-alertifying';
+
+@NgModule({
+imports: [NgxAlertifyingModule.forRoot({
+    toastDuration: 3000
+})],
+//
+})
+export class YourModule { }
+```
+## Component usage example
+```typescript
+
+  import { ToastService } from 'ngx-alertifying';
+
+  constructor(private toastService: ToastService){}
+
+  addInfo(): void {
+    this.toastService.addInfo('This is an info toast message!');
+  }
+
+  addError(): void {
+    this.toastService.addError('This is an error toast message!');
+  }
+
+  addSuccess(): void {
+    this.toastService.addSuccess('This is a success toast message!');
+  }
+
+  addWarning(): void {
+    this.toastService.addWarning('This is a warning toast message!');
+  }
+```

@@ -12,5 +12,6 @@ export class NgxAlertifyingConfig {
         public warningColor: string = '#f39c12',
         public successColor: string = '#2ecc71',
         public style: ALERT_SYLES = ALERT_SYLES.MATERIAL,
+        public toastDuration: number = 3000
     ) {}
 }
