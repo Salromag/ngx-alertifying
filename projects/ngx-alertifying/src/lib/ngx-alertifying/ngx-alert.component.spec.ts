@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgxAlertifyingComponent } from './ngx-alertifying.component';
+import { NgxAlertComponent } from './ngx-alert.component';
 import { NgxAlertifyingService } from '../ngx-alertifying.service';
 import { ALERT_SYLES, ALERT_TYPE, NgxAlertifyingConfig, NgxAlertifyingModule } from '../../public-api';
 import { CONFIG } from '../shared/injection-token/config-token';
 
 describe('NgxAlertifyingComponent', () => {
-  let component: NgxAlertifyingComponent;
-  let fixture: ComponentFixture<NgxAlertifyingComponent>;
+  let component: NgxAlertComponent;
+  let fixture: ComponentFixture<NgxAlertComponent>;
   let ngxAlertifyingService: NgxAlertifyingService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports:[NgxAlertifyingModule.forRoot()],
-      declarations: [ NgxAlertifyingComponent ],
+      declarations: [ NgxAlertComponent ],
       providers: [ 
         { provide: CONFIG, useValue: {} },
         {provide: NgxAlertifyingService }
@@ -22,7 +22,7 @@ describe('NgxAlertifyingComponent', () => {
     .compileComponents();
 
     ngxAlertifyingService = TestBed.inject(NgxAlertifyingService);
-    fixture = TestBed.createComponent(NgxAlertifyingComponent);
+    fixture = TestBed.createComponent(NgxAlertComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -33,6 +33,7 @@ describe('NgxAlertifyingComponent', () => {
       warningColor: '#ff0',
       dangerColor: '#f00',
       successColor: '#0f0',
+      toastDuration: 3000,
       style: ALERT_SYLES.MATERIAL
     };
   })
@@ -123,7 +124,7 @@ describe('NgxAlertifyingComponent', () => {
 
 
   it('should set alertBackground with rgba color when valid colorHex is provided', () => {
-    const colorHex = '#ff5733'; // Por ejemplo, un color en hexadecimal
+    const colorHex = '#ff5733';
     component.getColorHexARgba(colorHex);
   
     const r = parseInt(colorHex.slice(1, 3), 16);

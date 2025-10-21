@@ -1,5 +1,5 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
-import { NgxAlertifyingComponent } from './ngx-alertifying/ngx-alertifying.component';
+import { NgxAlertComponent } from './ngx-alertifying/ngx-alert.component';
 import { NgxAlertifyingService } from './ngx-alertifying.service';
 import { NgxAlertifyingConfig } from './shared/interfaces/ngx-alertifying-config.interface';
 import { CONFIG } from './shared/injection-token/config-token';
@@ -8,13 +8,13 @@ import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
-    NgxAlertifyingComponent
+    NgxAlertComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    NgxAlertifyingComponent
+    NgxAlertComponent
   ],
   providers: []
 })

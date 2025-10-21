@@ -33,7 +33,9 @@ export class ToastService {
         container.style.right = '1rem';
         container.style.display = 'flex';
         container.style.flexDirection = 'column-reverse';
+        container.style.zIndex = '10000';
         container.id = 'toast-container';
+        
         document.body.appendChild(container);
     }
 
@@ -58,6 +60,7 @@ export class ToastService {
         toast.classList.add('toast');
         toast.textContent = message;
         // Toast style
+        toast.style.zIndex = '10000';
         toast.style.position = 'relative';
         toast.style.top = '1.5rem';
         toast.style.transform = 'translateX(-20%)';

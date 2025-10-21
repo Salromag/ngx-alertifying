@@ -3,7 +3,7 @@
  */
 
 export * from './lib/ngx-alertifying.service';
-export * from './lib/ngx-alertifying/ngx-alertifying.component';
+export * from './lib/ngx-alertifying/ngx-alert.component';
 export * from './lib/ngx-alertifying.module';
 
 /* Alertifying */

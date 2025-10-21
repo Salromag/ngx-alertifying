@@ -6,10 +6,10 @@ import { NgxAlertifyingConfig } from '../shared/interfaces/ngx-alertifying-confi
 @Component({
   selector: 'ngx-alert',
   standalone: false,
-  templateUrl: './ngx-alertifying.component.html',
-  styleUrls: ['./ngx-alertifying.component.scss']
+  templateUrl: './ngx-alert.component.html',
+  styleUrls: ['./ngx-alert.component.scss']
 })
-export class NgxAlertifyingComponent implements OnInit {
+export class NgxAlertComponent implements OnInit {
   @Input() message: string;
   @Input() title: string;
   @Input() type: ALERT_TYPE;

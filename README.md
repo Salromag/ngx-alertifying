@@ -65,13 +65,13 @@ export class YourModule { }
 ## Component usage example
 
 ```html
-<ngx-alertifying [message]="'This is a info alert—check it out!'" [type]="typeInfo"></ngx-alertifying>
+<ngx-alert [message]="'This is a info alert—check it out!'" [type]="typeInfo"></ngx-alert>
 
-<ngx-alertifying [title]="'Hey, this is an alert title'" [message]="'This is a info alert—check it out!'" [type]="typeInfo"></ngx-alertifying>
+<ngx-alert [title]="'Hey, this is an alert title'" [message]="'This is a info alert—check it out!'" [type]="typeInfo"></ngx-alert>
 
-<ngx-alertifying [message]="'This is a info alert—check it out!'" [type]="typeInfo" [showBackground]="true"></ngx-alertifying>
+<ngx-alert [message]="'This is a info alert—check it out!'" [type]="typeInfo" [showBackground]="true"></ngx-alert>
 
-<ngx-alertifying [title]="'Hey, this is an alert title'" [message]="'This is a info alert—check it out!'" [type]="typeInfo" [showBackground]="true"></ngx-alertifying>
+<ngx-alert [title]="'Hey, this is an alert title'" [message]="'This is a info alert—check it out!'" [type]="typeInfo" [showBackground]="true"></ngx-alert>
 
 ```
 
