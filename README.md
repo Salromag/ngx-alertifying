@@ -18,6 +18,13 @@ ngx-alertifying library is a valuable tool for developers seeking a straightforw
 
 - **Enhanced Accessibility:** Our alert messages are designed for easy readability and usability, catering to all users, including those with disabilities.
 
+## Version map
+
+| NgxMatForm Version | Angular Version | Node Version |
+|--------------------|-----------------|--------------|
+| `3.x.x`            | `20.x`          | `22.x`       | 
+| `2.x.x`            | `17.x`          | `18.x`       | 
+
 ## Installation
 
 ```
@@ -65,6 +72,25 @@ export class YourModule { }
 <ngx-alertifying [message]="'This is a info alert—check it out!'" [type]="typeInfo" [showBackground]="true"></ngx-alertifying>
 
 <ngx-alertifying [title]="'Hey, this is an alert title'" [message]="'This is a info alert—check it out!'" [type]="typeInfo" [showBackground]="true"></ngx-alertifying>
+
+```
+
+## Alert usage
+
+```typescript
+@import { ToastService } from 'ngx-alertifying';
+
+export class AppComponent {
+
+    constructor(private readonly toastService: ToastService );
+
+    openToast(): void {
+        this.toastService.addInfo('Info alert message');
+        this.toastService.addError('Error alert message');
+        this.toastService.addSuccess('Success alert message');
+        this.toastService.addWarning('Warning alert message');
+    }
+}
 
 ```
 

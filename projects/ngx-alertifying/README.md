@@ -18,13 +18,20 @@ ngx-alertifying library is a valuable tool for developers seeking a straightforw
 
 - **Enhanced Accessibility:** Our alert messages are designed for easy readability and usability, catering to all users, including those with disabilities.
 
+## Version map
+
+| NgxMatForm Version | Angular Version | Node Version |
+|--------------------|-----------------|--------------|
+| `3.x.x`            | `20.x`          | `22.x`       | 
+| `2.x.x`            | `17.x`          | `18.x`       | 
+
 ## Installation
 
 ```
 npm install ngx-alertifying
 ```
 
-## Alert Basic usage
+## Basic usage
 ```typescript
 import { NgxAlertifyingModule } from 'ngx-alertifying';
 
@@ -48,7 +55,7 @@ imports: [NgxAlertifyingModule.forRoot({
     warningColor: '',
     dangerColor: '',
     successColor: '',
-    style: ALERT_STYLE.MATERIAL
+    style: ALERT_sTYLE.MATERIAL 
 })],
 //
 })
@@ -58,13 +65,32 @@ export class YourModule { }
 ## Component usage example
 
 ```html
-<ngx-alert [message]="'This is a info alert—check it out!'" [type]="typeInfo"></ngx-alert>
+<ngx-alertifying [message]="'This is a info alert—check it out!'" [type]="typeInfo"></ngx-alertifying>
 
-<ngx-alert [title]="'Hey, this is an alert title'" [message]="'This is a info alert—check it out!'" [type]="typeInfo"></ngx-alert>
+<ngx-alertifying [title]="'Hey, this is an alert title'" [message]="'This is a info alert—check it out!'" [type]="typeInfo"></ngx-alertifying>
 
-<ngx-alert [message]="'This is a info alert—check it out!'" [type]="typeInfo" [showBackground]="true"></ngx-alert>
+<ngx-alertifying [message]="'This is a info alert—check it out!'" [type]="typeInfo" [showBackground]="true"></ngx-alertifying>
 
-<ngx-alert [title]="'Hey, this is an alert title'" [message]="'This is a info alert—check it out!'" [type]="typeInfo" [showBackground]="true"></ngx-alert>
+<ngx-alertifying [title]="'Hey, this is an alert title'" [message]="'This is a info alert—check it out!'" [type]="typeInfo" [showBackground]="true"></ngx-alertifying>
+
+```
+
+## Alert usage
+
+```typescript
+@import { ToastService } from 'ngx-alertifying';
+
+export class AppComponent {
+
+    constructor(private readonly toastService: ToastService );
+
+    openToast(): void {
+        this.toastService.addInfo('Info alert message');
+        this.toastService.addError('Error alert message');
+        this.toastService.addSuccess('Success alert message');
+        this.toastService.addWarning('Warning alert message');
+    }
+}
 
 ```
 
@@ -75,43 +101,3 @@ export class YourModule { }
 
 ### Example with Background
 ![bg](https://github.com/Salromag/ngx-alertifying/assets/128465637/81505d6b-9c14-4f86-b70a-e60b0d7a6559)
-
-
-## Toast Basic usage
-
-## Configuration
-Module accepts also configuration for the colors and the style of the alert
-```typescript
-import { NgxAlertifyingModule } from 'ngx-alertifying';
-
-@NgModule({
-imports: [NgxAlertifyingModule.forRoot({
-    toastDuration: 3000
-})],
-//
-})
-export class YourModule { }
-```
-## Component usage example
-```typescript
-
-  import { ToastService } from 'ngx-alertifying';
-
-  constructor(private toastService: ToastService){}
-
-  addInfo(): void {
-    this.toastService.addInfo('This is an info toast message!');
-  }
-
-  addError(): void {
-    this.toastService.addError('This is an error toast message!');
-  }
-
-  addSuccess(): void {
-    this.toastService.addSuccess('This is a success toast message!');
-  }
-
-  addWarning(): void {
-    this.toastService.addWarning('This is a warning toast message!');
-  }
-```

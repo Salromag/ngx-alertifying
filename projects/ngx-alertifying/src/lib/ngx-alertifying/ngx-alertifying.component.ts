@@ -5,6 +5,7 @@ import { NgxAlertifyingConfig } from '../shared/interfaces/ngx-alertifying-confi
 
 @Component({
   selector: 'ngx-alert',
+  standalone: false,
   templateUrl: './ngx-alertifying.component.html',
   styleUrls: ['./ngx-alertifying.component.scss']
 })
